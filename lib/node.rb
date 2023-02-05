@@ -1,12 +1,11 @@
+require './lib/linked_list'
+
 class Node
-  attr_reader = 
+  attr_accessor :data, :next_node
 
-  def initialize(data)
+  def initialize(data, next_node)
     @data = data
-  end
-
-  def next_node
-    node = nil
+    @next_node = next_node
   end
 end
 

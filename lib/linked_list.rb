@@ -30,14 +30,24 @@ class LinkedList
     return count
   end
 
-  def find(data)
+  def to_string
+    result = ''
     node = @head
     while(!node.nil?)
-      if(node.value == data)
-        return true
-      end
-      node = node.next_node
+      result += '#{node.data} '
+      node = node.next_mode
     end
-      false
+    return result.strip
+  end
+
+  # def find(data)
+  #   node = @head
+  #   while(!node.nil?)
+  #     if(node.value == data)
+  #       return true
+  #     end
+  #     node = node.next_node
+  #   end
+  #     false
 end
 end
