@@ -2,32 +2,34 @@ require 'rspec'
 require './lib/linked_list'
 require './lib/node'
 
-describe LinkedList do
+  describe LinkedList do
   it 'LinkedList exists' do
-  list = LinkedList.new
-  expect(list).to be_an_instance_of(LinkedList)
-  # expect(list).to be_a(LinkedList)
+    list = LinkedList.new
+    expect(list).to be_an_instance_of(LinkedList)
   end
-it 'has attributes' do
-  list = LinkedList.new
-  expect(list.head).to eq(nil)
 
-end
-
-  it 'head exists' do
+  it 'has head attribute' do
     list = LinkedList.new
     expect(list.head).to eq(nil)
   end
 
   it 'append sounds' do
     list = LinkedList.new
-    list.append("doop")
-    expect(list.append("doop")).to eq("doop")
+    list.append('doop')
+    expect(list.append.data).to eq('doop')
   end
 
-  it 'next_node equals nil' do
-    list = Node.new('doop')
-    expect(list.data).to eq('doop')
+  it 'returns correct count of sounds' do
+    list = LinkedList.new
+    list.append('doop')
+    list.append('deep')
+    expect(list.count).to eq(2)
   end
 
+  it 'returns a string of the list' do
+    list = LinkedList.new
+    list.append('doop')
+    list.append('deep')
+    expect(list.to_string).to eq('doop deep')
+  end
 end
