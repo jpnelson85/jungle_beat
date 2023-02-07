@@ -1,5 +1,5 @@
 require 'rspec'
-require './lib/node.rb'
+require './lib/node'
 
 describe Node do
   it 'a node exists' do

@@ -16,7 +16,7 @@ require './lib/node'
   it 'append sounds' do
     list = LinkedList.new
     list.append('doop')
-    expect(list.append.data).to eq('doop')
+    expect(list.head.data).to eq('doop')
   end
 
   it 'returns correct count of sounds' do

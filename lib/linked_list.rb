@@ -7,15 +7,15 @@ class LinkedList
     @head = nil
   end
 
-  def append(sound)
-    if @head = nil?
+  def append(data)
+    if @head.nil?
       @head = Node.new(data, nil)
     else
       last_node = @head
-      while(!last_node.next_node.nil?)
+      while (!last_node.next_node?)
         last_node = last_node.next_node
+      return last_node.next_node = Node.new(data, nil)
       end
-      last_node.next_node = Node.new(data, nil)
     end
   end
 
@@ -33,9 +33,9 @@ class LinkedList
     result = ''
     node = @head
     while !node.nil?
-      result += '#{node.data} '
+      result += "#{node.data} "
       node = node.next_mode
+    return result.strip
     end
-    result.strip
   end
 end
