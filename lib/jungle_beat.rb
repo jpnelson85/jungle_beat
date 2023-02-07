@@ -1,7 +1,7 @@
-require '.lib/linked_list'
+require './lib/linked_list'
 require './lib/node'
 
-JungleBeat
+class JungleBeat
   attr_reader :list 
   
   def initialize
@@ -9,8 +9,8 @@ JungleBeat
   end
 
   def append(data)
-    data.split.each do |beat|
-      list.append(beat)
+    data.split(' ').each do |beat|
+      @list.append(beat)
     end
   end
 

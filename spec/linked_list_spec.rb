@@ -2,7 +2,7 @@ require 'rspec'
 require './lib/linked_list'
 require './lib/node'
 
-  describe LinkedList do
+describe LinkedList do
   it 'LinkedList exists' do
     list = LinkedList.new
     expect(list).to be_an_instance_of(LinkedList)
