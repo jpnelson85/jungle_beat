@@ -12,10 +12,10 @@ class LinkedList
       @head = Node.new(data, nil)
     else
       last_node = @head
-      while (!last_node.next_node?)
+      while (last_node.next_node != nil)
         last_node = last_node.next_node
-      return last_node.next_node = Node.new(data, nil)
       end
+      last_node.next_node = Node.new(data, nil)
     end
   end
 
@@ -34,8 +34,8 @@ class LinkedList
     node = @head
     while !node.nil?
       result += "#{node.data} "
-      node = node.next_mode
-    return result.strip
+      node = node.next_node
     end
+    return result.strip
   end
 end
