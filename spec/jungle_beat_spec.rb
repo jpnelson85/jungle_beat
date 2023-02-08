@@ -30,5 +30,4 @@ describe JungleBeat do
     expect(jb.play).to eq(`say -r 500 -v Boing deep doo ditt`)
   end
   
-  add one more question
 end
